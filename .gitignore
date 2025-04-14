@@ -1,0 +1,110 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+ENV/
+venv/
+VEvn/
+dist/
+build/
+eggs/
+.eggs/
+lib/*.egg-info/
+*.egg
+*.whl
+pip-log.txt
+pip-delete-this.txt
+*.egg-info
+.installed.cfg
+*.manifest
+
+# PyInstaller
+#  Usually these files are written by a python script from executable.
+_MEI*
+#  Used by pyinstaller when --onefile is not used.
+#!python
+# __pycache__/
+# *.#*
+# *.lib
+# lib-dynload
+# w9xpopen.exe
+# *.*
+# *.pkg
+# *.app
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py*
+db.sqlite3
+db.sqlite3-journal
+instance/
+
+# Flask stuff:
+instance/
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# Buildozer
+.buildozer/
+
+# PDM
+.pdm.toml
+.pdm-python/
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# pyenv
+#   These aren't created by pyenv, but can appear in the workspace
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+
+# Session files
+*.session
+
+# Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# dotenv
+.env
