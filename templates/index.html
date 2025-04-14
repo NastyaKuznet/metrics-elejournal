@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Метрики по проекту "Электронный журнал"</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <h1>Метрики по проекту "Электронный журнал"</h1>
+
+    <form method="post">
+        <label for="start_date">Дата начала:</label>
+        <input type="date" id="start_date" name="start_date" value="{{ start_date }}" required><br><br>
+
+        <label for="end_date">Дата окончания:</label>
+        <input type="date" id="end_date" name="end_date" value="{{ end_date }}" required><br><br>
+
+        <button type="submit">Применить</button>
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <br>
+    {% if text_count_subdued_headman %}
+        Количество приглашенных старост для участия в проекте: {{ text_count_subdued_headman }}
+    {% endif %}
+    <br>
+    {% if text_count_registered_headman %}
+        Количество зарегистрированных старост: {{ text_count_registered_headman }}
+    {% endif %}
+    <br>
+    {% if text_count_opened_miniapp_headman %}
+        Количество старост, открывших miniapp за период {{ start_date }} - {{ end_date }}: {{ text_count_opened_miniapp_headman }}
+    {% endif %}
+    <br>
+    {% if text_count_opened_current_lesson_headman %}
+        Количество старост, открывших текущую пару за период {{ start_date }} - {{ end_date }}: {{ text_count_opened_current_lesson_headman }}
+    {% endif %}
+    <br>
+    {% if text_count_saved_attendance_headman %}
+        Количество старост, открывших сохранивших посещаемость за период {{ start_date }} - {{ end_date }}: {{ text_count_saved_attendance_headman }}
+    {% endif %}
+    <br>
+
+    {% if graph_count_opened_miniapp_every_day %}
+        {{ graph_count_opened_miniapp_every_day | safe }}
+    {% endif %}
+
+    {% if graph_count_opened_current_lesson_headman_every_day %}
+        {{ graph_count_opened_current_lesson_headman_every_day | safe }}
+    {% endif %}
+
+    {% if graph_count_saved_attendance_headman_every_day %}
+        {{ graph_count_saved_attendance_headman_every_day | safe }}
+    {% endif %}
+</body>
+</html>
